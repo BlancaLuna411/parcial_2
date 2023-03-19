@@ -16,5 +16,17 @@ namespace parcial_2.Formularios
         {
             InitializeComponent();
         }
+
+        private void Ventas_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet8.VENTAS' Puede moverla o quitarla según sea necesario.
+            this.vENTASTableAdapter.Fill(this.vENTASDataSet8.VENTAS);
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

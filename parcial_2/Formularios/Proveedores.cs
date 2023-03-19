@@ -19,6 +19,8 @@ namespace parcial_2.Formularios
 
         private void Proveedores_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet6.PROVEEDORES' Puede moverla o quitarla según sea necesario.
+            this.pROVEEDORESTableAdapter.Fill(this.vENTASDataSet6.PROVEEDORES);
 
         }
     }

@@ -16,5 +16,12 @@ namespace parcial_2.Formularios
         {
             InitializeComponent();
         }
+
+        private void Productos_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet5.PRODUCTOS' Puede moverla o quitarla según sea necesario.
+            this.pRODUCTOSTableAdapter.Fill(this.vENTASDataSet5.PRODUCTOS);
+
+        }
     }
 }

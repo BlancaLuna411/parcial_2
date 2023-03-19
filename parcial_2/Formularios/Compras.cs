@@ -16,5 +16,12 @@ namespace parcial_2.Formularios
         {
             InitializeComponent();
         }
+
+        private void Compras_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet4.COMPRAS' Puede moverla o quitarla según sea necesario.
+            this.cOMPRASTableAdapter.Fill(this.vENTASDataSet4.COMPRAS);
+
+        }
     }
 }

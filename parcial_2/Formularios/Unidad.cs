@@ -16,5 +16,12 @@ namespace parcial_2.Formularios
         {
             InitializeComponent();
         }
+
+        private void Unidad_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet7.UNIDAD' Puede moverla o quitarla según sea necesario.
+            this.uNIDADTableAdapter.Fill(this.vENTASDataSet7.UNIDAD);
+
+        }
     }
 }

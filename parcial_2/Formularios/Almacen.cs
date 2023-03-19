@@ -16,5 +16,12 @@ namespace parcial_2
         {
             InitializeComponent();
         }
+
+        private void Almacen_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet.ALMACENES' Puede moverla o quitarla según sea necesario.
+            this.aLMACENESTableAdapter.Fill(this.vENTASDataSet.ALMACENES);
+
+        }
     }
 }
