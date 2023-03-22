@@ -33,21 +33,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.TXTNOM = new System.Windows.Forms.TextBox();
             this.TXTID = new System.Windows.Forms.TextBox();
-            this.BTNBUSCAR = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.BTNREG = new System.Windows.Forms.Button();
             this.BTNACT = new System.Windows.Forms.Button();
             this.BTNELIM = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.vENTASDataSet = new parcial_2.VENTASDataSet();
-            this.aLMACENESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aLMACENESTableAdapter = new parcial_2.VENTASDataSetTableAdapters.ALMACENESTableAdapter();
             this.aLIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aLNOMBREDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aLMACENESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vENTASDataSet = new parcial_2.VENTASDataSet();
+            this.aLMACENESTableAdapter = new parcial_2.VENTASDataSetTableAdapters.ALMACENESTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLMACENESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,7 +71,7 @@
             // TXTNOM
             // 
             this.TXTNOM.Location = new System.Drawing.Point(258, 50);
-            this.TXTNOM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTNOM.Margin = new System.Windows.Forms.Padding(2);
             this.TXTNOM.Name = "TXTNOM";
             this.TXTNOM.Size = new System.Drawing.Size(68, 20);
             this.TXTNOM.TabIndex = 10;
@@ -80,20 +79,10 @@
             // TXTID
             // 
             this.TXTID.Location = new System.Drawing.Point(70, 50);
-            this.TXTID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTID.Margin = new System.Windows.Forms.Padding(2);
             this.TXTID.Name = "TXTID";
             this.TXTID.Size = new System.Drawing.Size(68, 20);
             this.TXTID.TabIndex = 9;
-            // 
-            // BTNBUSCAR
-            // 
-            this.BTNBUSCAR.Location = new System.Drawing.Point(372, 42);
-            this.BTNBUSCAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BTNBUSCAR.Name = "BTNBUSCAR";
-            this.BTNBUSCAR.Size = new System.Drawing.Size(89, 35);
-            this.BTNBUSCAR.TabIndex = 8;
-            this.BTNBUSCAR.Text = "Buscar";
-            this.BTNBUSCAR.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -117,18 +106,19 @@
             // 
             // BTNREG
             // 
-            this.BTNREG.Location = new System.Drawing.Point(552, 18);
-            this.BTNREG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNREG.Location = new System.Drawing.Point(382, 42);
+            this.BTNREG.Margin = new System.Windows.Forms.Padding(2);
             this.BTNREG.Name = "BTNREG";
             this.BTNREG.Size = new System.Drawing.Size(89, 35);
             this.BTNREG.TabIndex = 12;
             this.BTNREG.Text = "Registrar";
             this.BTNREG.UseVisualStyleBackColor = true;
+            this.BTNREG.Click += new System.EventHandler(this.BTNREG_Click);
             // 
             // BTNACT
             // 
-            this.BTNACT.Location = new System.Drawing.Point(552, 62);
-            this.BTNACT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNACT.Location = new System.Drawing.Point(552, 18);
+            this.BTNACT.Margin = new System.Windows.Forms.Padding(2);
             this.BTNACT.Name = "BTNACT";
             this.BTNACT.Size = new System.Drawing.Size(89, 35);
             this.BTNACT.TabIndex = 13;
@@ -138,12 +128,13 @@
             // BTNELIM
             // 
             this.BTNELIM.Location = new System.Drawing.Point(552, 105);
-            this.BTNELIM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNELIM.Margin = new System.Windows.Forms.Padding(2);
             this.BTNELIM.Name = "BTNELIM";
             this.BTNELIM.Size = new System.Drawing.Size(89, 35);
             this.BTNELIM.TabIndex = 14;
             this.BTNELIM.Text = "Eliminar";
             this.BTNELIM.UseVisualStyleBackColor = true;
+            this.BTNELIM.Click += new System.EventHandler(this.BTNELIM_Click);
             // 
             // dataGridView1
             // 
@@ -158,20 +149,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(371, 151);
             this.dataGridView1.TabIndex = 15;
             // 
-            // vENTASDataSet
-            // 
-            this.vENTASDataSet.DataSetName = "VENTASDataSet";
-            this.vENTASDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // aLMACENESBindingSource
-            // 
-            this.aLMACENESBindingSource.DataMember = "ALMACENES";
-            this.aLMACENESBindingSource.DataSource = this.vENTASDataSet;
-            // 
-            // aLMACENESTableAdapter
-            // 
-            this.aLMACENESTableAdapter.ClearBeforeFill = true;
-            // 
             // aLIDDataGridViewTextBoxColumn
             // 
             this.aLIDDataGridViewTextBoxColumn.DataPropertyName = "AL_ID";
@@ -183,6 +160,20 @@
             this.aLNOMBREDataGridViewTextBoxColumn.DataPropertyName = "AL_NOMBRE";
             this.aLNOMBREDataGridViewTextBoxColumn.HeaderText = "AL_NOMBRE";
             this.aLNOMBREDataGridViewTextBoxColumn.Name = "aLNOMBREDataGridViewTextBoxColumn";
+            // 
+            // aLMACENESBindingSource
+            // 
+            this.aLMACENESBindingSource.DataMember = "ALMACENES";
+            this.aLMACENESBindingSource.DataSource = this.vENTASDataSet;
+            // 
+            // vENTASDataSet
+            // 
+            this.vENTASDataSet.DataSetName = "VENTASDataSet";
+            this.vENTASDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // aLMACENESTableAdapter
+            // 
+            this.aLMACENESTableAdapter.ClearBeforeFill = true;
             // 
             // Almacen
             // 
@@ -197,7 +188,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TXTNOM);
             this.Controls.Add(this.TXTID);
-            this.Controls.Add(this.BTNBUSCAR);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -205,8 +195,8 @@
             this.Text = "Almacen.Fm1";
             this.Load += new System.EventHandler(this.Almacen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLMACENESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,7 +208,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TXTNOM;
         private System.Windows.Forms.TextBox TXTID;
-        private System.Windows.Forms.Button BTNBUSCAR;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BTNREG;
