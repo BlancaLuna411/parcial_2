@@ -39,29 +39,29 @@
             this.BTNREG = new System.Windows.Forms.Button();
             this.BTNBUSCAR = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.vENTASDataSet7 = new parcial_2.VENTASDataSet7();
-            this.uNIDADBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uNIDADTableAdapter = new parcial_2.VENTASDataSet7TableAdapters.UNIDADTableAdapter();
             this.uNIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uNDESCRIPCIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uNIDADBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vENTASDataSet7 = new parcial_2.VENTASDataSet7();
+            this.uNIDADTableAdapter = new parcial_2.VENTASDataSet7TableAdapters.UNIDADTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uNIDADBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet7)).BeginInit();
             this.SuspendLayout();
             // 
             // TXTDESC
             // 
-            this.TXTDESC.Location = new System.Drawing.Point(127, 71);
-            this.TXTDESC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTDESC.Location = new System.Drawing.Point(208, 71);
+            this.TXTDESC.Margin = new System.Windows.Forms.Padding(2);
             this.TXTDESC.Multiline = true;
             this.TXTDESC.Name = "TXTDESC";
-            this.TXTDESC.Size = new System.Drawing.Size(406, 160);
+            this.TXTDESC.Size = new System.Drawing.Size(194, 32);
             this.TXTDESC.TabIndex = 10;
             // 
             // TXTID
             // 
-            this.TXTID.Location = new System.Drawing.Point(342, 30);
-            this.TXTID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTID.Location = new System.Drawing.Point(271, 26);
+            this.TXTID.Margin = new System.Windows.Forms.Padding(2);
             this.TXTID.Name = "TXTID";
             this.TXTID.Size = new System.Drawing.Size(68, 20);
             this.TXTID.TabIndex = 9;
@@ -69,12 +69,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 74);
+            this.label3.Location = new System.Drawing.Point(114, 82);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Descripcion ";
+            this.label3.Text = "DESCRIPCION";
             // 
             // label2
             // 
@@ -99,18 +99,19 @@
             // 
             // BTNELIM
             // 
-            this.BTNELIM.Location = new System.Drawing.Point(626, 177);
-            this.BTNELIM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNELIM.Location = new System.Drawing.Point(546, 185);
+            this.BTNELIM.Margin = new System.Windows.Forms.Padding(2);
             this.BTNELIM.Name = "BTNELIM";
             this.BTNELIM.Size = new System.Drawing.Size(87, 29);
             this.BTNELIM.TabIndex = 60;
             this.BTNELIM.Text = "Eliminar";
             this.BTNELIM.UseVisualStyleBackColor = true;
+            this.BTNELIM.Click += new System.EventHandler(this.BTNELIM_Click);
             // 
             // BTNACT
             // 
-            this.BTNACT.Location = new System.Drawing.Point(626, 125);
-            this.BTNACT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNACT.Location = new System.Drawing.Point(546, 133);
+            this.BTNACT.Margin = new System.Windows.Forms.Padding(2);
             this.BTNACT.Name = "BTNACT";
             this.BTNACT.Size = new System.Drawing.Size(87, 29);
             this.BTNACT.TabIndex = 59;
@@ -119,23 +120,25 @@
             // 
             // BTNREG
             // 
-            this.BTNREG.Location = new System.Drawing.Point(626, 74);
-            this.BTNREG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNREG.Location = new System.Drawing.Point(546, 74);
+            this.BTNREG.Margin = new System.Windows.Forms.Padding(2);
             this.BTNREG.Name = "BTNREG";
             this.BTNREG.Size = new System.Drawing.Size(87, 29);
             this.BTNREG.TabIndex = 58;
             this.BTNREG.Text = "Registrar ";
             this.BTNREG.UseVisualStyleBackColor = true;
+            this.BTNREG.Click += new System.EventHandler(this.BTNREG_Click);
             // 
             // BTNBUSCAR
             // 
-            this.BTNBUSCAR.Location = new System.Drawing.Point(626, 21);
-            this.BTNBUSCAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNBUSCAR.Location = new System.Drawing.Point(546, 21);
+            this.BTNBUSCAR.Margin = new System.Windows.Forms.Padding(2);
             this.BTNBUSCAR.Name = "BTNBUSCAR";
             this.BTNBUSCAR.Size = new System.Drawing.Size(87, 29);
             this.BTNBUSCAR.TabIndex = 57;
             this.BTNBUSCAR.Text = "Buscar";
             this.BTNBUSCAR.UseVisualStyleBackColor = true;
+            this.BTNBUSCAR.Click += new System.EventHandler(this.BTNBUSCAR_Click);
             // 
             // dataGridView1
             // 
@@ -145,24 +148,10 @@
             this.uNIDDataGridViewTextBoxColumn,
             this.uNDESCRIPCIONDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.uNIDADBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 253);
+            this.dataGridView1.Location = new System.Drawing.Point(177, 142);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(680, 177);
+            this.dataGridView1.Size = new System.Drawing.Size(251, 177);
             this.dataGridView1.TabIndex = 61;
-            // 
-            // vENTASDataSet7
-            // 
-            this.vENTASDataSet7.DataSetName = "VENTASDataSet7";
-            this.vENTASDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // uNIDADBindingSource
-            // 
-            this.uNIDADBindingSource.DataMember = "UNIDAD";
-            this.uNIDADBindingSource.DataSource = this.vENTASDataSet7;
-            // 
-            // uNIDADTableAdapter
-            // 
-            this.uNIDADTableAdapter.ClearBeforeFill = true;
             // 
             // uNIDDataGridViewTextBoxColumn
             // 
@@ -176,12 +165,26 @@
             this.uNDESCRIPCIONDataGridViewTextBoxColumn.HeaderText = "UN_DESCRIPCION";
             this.uNDESCRIPCIONDataGridViewTextBoxColumn.Name = "uNDESCRIPCIONDataGridViewTextBoxColumn";
             // 
+            // uNIDADBindingSource
+            // 
+            this.uNIDADBindingSource.DataMember = "UNIDAD";
+            this.uNIDADBindingSource.DataSource = this.vENTASDataSet7;
+            // 
+            // vENTASDataSet7
+            // 
+            this.vENTASDataSet7.DataSetName = "VENTASDataSet7";
+            this.vENTASDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // uNIDADTableAdapter
+            // 
+            this.uNIDADTableAdapter.ClearBeforeFill = true;
+            // 
             // Unidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(762, 442);
+            this.ClientSize = new System.Drawing.Size(651, 340);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BTNELIM);
             this.Controls.Add(this.BTNACT);
@@ -192,13 +195,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Unidad";
             this.Text = "Unidad";
             this.Load += new System.EventHandler(this.Unidad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uNIDADBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

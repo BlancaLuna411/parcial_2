@@ -1,4 +1,5 @@
-﻿using System;
+﻿using parcial_2.Formularios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace parcial_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Almacen());
+            Application.Run(new Existencias());
         }
     }
 }

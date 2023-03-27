@@ -39,14 +39,15 @@
             this.BTNACT = new System.Windows.Forms.Button();
             this.BTNELIM = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.dsAlmacenes = new parcial_2.dsAlmacenes();
+            this.aLMACENESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aLMACENESTableAdapter = new parcial_2.dsAlmacenesTableAdapters.ALMACENESTableAdapter();
             this.aLIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aLNOMBREDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aLMACENESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vENTASDataSet = new parcial_2.VENTASDataSet();
-            this.aLMACENESTableAdapter = new parcial_2.VENTASDataSetTableAdapters.ALMACENESTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsAlmacenes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLMACENESBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -124,10 +125,11 @@
             this.BTNACT.TabIndex = 13;
             this.BTNACT.Text = "Actualizar";
             this.BTNACT.UseVisualStyleBackColor = true;
+            this.BTNACT.Click += new System.EventHandler(this.BTNACT_Click);
             // 
             // BTNELIM
             // 
-            this.BTNELIM.Location = new System.Drawing.Point(552, 105);
+            this.BTNELIM.Location = new System.Drawing.Point(552, 127);
             this.BTNELIM.Margin = new System.Windows.Forms.Padding(2);
             this.BTNELIM.Name = "BTNELIM";
             this.BTNELIM.Size = new System.Drawing.Size(89, 35);
@@ -146,8 +148,33 @@
             this.dataGridView1.DataSource = this.aLMACENESBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(70, 163);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(371, 151);
+            this.dataGridView1.Size = new System.Drawing.Size(239, 151);
             this.dataGridView1.TabIndex = 15;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(552, 69);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(89, 35);
+            this.btnBuscar.TabIndex = 16;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // dsAlmacenes
+            // 
+            this.dsAlmacenes.DataSetName = "dsAlmacenes";
+            this.dsAlmacenes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // aLMACENESBindingSource
+            // 
+            this.aLMACENESBindingSource.DataMember = "ALMACENES";
+            this.aLMACENESBindingSource.DataSource = this.dsAlmacenes;
+            // 
+            // aLMACENESTableAdapter
+            // 
+            this.aLMACENESTableAdapter.ClearBeforeFill = true;
             // 
             // aLIDDataGridViewTextBoxColumn
             // 
@@ -161,26 +188,13 @@
             this.aLNOMBREDataGridViewTextBoxColumn.HeaderText = "AL_NOMBRE";
             this.aLNOMBREDataGridViewTextBoxColumn.Name = "aLNOMBREDataGridViewTextBoxColumn";
             // 
-            // aLMACENESBindingSource
-            // 
-            this.aLMACENESBindingSource.DataMember = "ALMACENES";
-            this.aLMACENESBindingSource.DataSource = this.vENTASDataSet;
-            // 
-            // vENTASDataSet
-            // 
-            this.vENTASDataSet.DataSetName = "VENTASDataSet";
-            this.vENTASDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // aLMACENESTableAdapter
-            // 
-            this.aLMACENESTableAdapter.ClearBeforeFill = true;
-            // 
             // Almacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(669, 446);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BTNELIM);
             this.Controls.Add(this.BTNACT);
@@ -195,8 +209,8 @@
             this.Text = "Almacen.Fm1";
             this.Load += new System.EventHandler(this.Almacen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsAlmacenes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLMACENESBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,9 +228,10 @@
         private System.Windows.Forms.Button BTNACT;
         private System.Windows.Forms.Button BTNELIM;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private VENTASDataSet vENTASDataSet;
+        private System.Windows.Forms.Button btnBuscar;
+        private dsAlmacenes dsAlmacenes;
         private System.Windows.Forms.BindingSource aLMACENESBindingSource;
-        private VENTASDataSetTableAdapters.ALMACENESTableAdapter aLMACENESTableAdapter;
+        private dsAlmacenesTableAdapters.ALMACENESTableAdapter aLMACENESTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn aLIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aLNOMBREDataGridViewTextBoxColumn;
     }

@@ -51,9 +51,6 @@
             this.BTNREG = new System.Windows.Forms.Button();
             this.BTNBUSCAR = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.vENTASDataSet5 = new parcial_2.VENTASDataSet5();
-            this.pRODUCTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pRODUCTOSTableAdapter = new parcial_2.VENTASDataSet5TableAdapters.PRODUCTOSTableAdapter();
             this.pRIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRNOMBREDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRIDUNIDADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,15 +59,18 @@
             this.pRIDTPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRPRECIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRIVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRODUCTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vENTASDataSet5 = new parcial_2.VENTASDataSet5();
+            this.pRODUCTOSTableAdapter = new parcial_2.VENTASDataSet5TableAdapters.PRODUCTOSTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet5)).BeginInit();
             this.SuspendLayout();
             // 
             // TXTPRE
             // 
             this.TXTPRE.Location = new System.Drawing.Point(393, 58);
-            this.TXTPRE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTPRE.Margin = new System.Windows.Forms.Padding(2);
             this.TXTPRE.Name = "TXTPRE";
             this.TXTPRE.Size = new System.Drawing.Size(68, 20);
             this.TXTPRE.TabIndex = 35;
@@ -78,7 +78,7 @@
             // TXTIVA
             // 
             this.TXTIVA.Location = new System.Drawing.Point(393, 100);
-            this.TXTIVA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTIVA.Margin = new System.Windows.Forms.Padding(2);
             this.TXTIVA.Name = "TXTIVA";
             this.TXTIVA.Size = new System.Drawing.Size(68, 20);
             this.TXTIVA.TabIndex = 34;
@@ -86,7 +86,7 @@
             // TXTSTMIN
             // 
             this.TXTSTMIN.Location = new System.Drawing.Point(227, 62);
-            this.TXTSTMIN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTSTMIN.Margin = new System.Windows.Forms.Padding(2);
             this.TXTSTMIN.Name = "TXTSTMIN";
             this.TXTSTMIN.Size = new System.Drawing.Size(68, 20);
             this.TXTSTMIN.TabIndex = 33;
@@ -94,7 +94,7 @@
             // TXTNOM
             // 
             this.TXTNOM.Location = new System.Drawing.Point(83, 98);
-            this.TXTNOM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTNOM.Margin = new System.Windows.Forms.Padding(2);
             this.TXTNOM.Name = "TXTNOM";
             this.TXTNOM.Size = new System.Drawing.Size(68, 20);
             this.TXTNOM.TabIndex = 32;
@@ -102,7 +102,7 @@
             // TXTIDU
             // 
             this.TXTIDU.Location = new System.Drawing.Point(83, 143);
-            this.TXTIDU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTIDU.Margin = new System.Windows.Forms.Padding(2);
             this.TXTIDU.Name = "TXTIDU";
             this.TXTIDU.Size = new System.Drawing.Size(68, 20);
             this.TXTIDU.TabIndex = 31;
@@ -110,7 +110,7 @@
             // TXTSTMAX
             // 
             this.TXTSTMAX.Location = new System.Drawing.Point(227, 100);
-            this.TXTSTMAX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTSTMAX.Margin = new System.Windows.Forms.Padding(2);
             this.TXTSTMAX.Name = "TXTSTMAX";
             this.TXTSTMAX.Size = new System.Drawing.Size(68, 20);
             this.TXTSTMAX.TabIndex = 30;
@@ -118,7 +118,7 @@
             // TXTIDTP
             // 
             this.TXTIDTP.Location = new System.Drawing.Point(227, 145);
-            this.TXTIDTP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTIDTP.Margin = new System.Windows.Forms.Padding(2);
             this.TXTIDTP.Name = "TXTIDTP";
             this.TXTIDTP.Size = new System.Drawing.Size(68, 20);
             this.TXTIDTP.TabIndex = 29;
@@ -126,7 +126,7 @@
             // TXTID
             // 
             this.TXTID.Location = new System.Drawing.Point(83, 62);
-            this.TXTID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTID.Margin = new System.Windows.Forms.Padding(2);
             this.TXTID.Name = "TXTID";
             this.TXTID.Size = new System.Drawing.Size(68, 20);
             this.TXTID.TabIndex = 28;
@@ -225,7 +225,7 @@
             // BTNELIM
             // 
             this.BTNELIM.Location = new System.Drawing.Point(607, 137);
-            this.BTNELIM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNELIM.Margin = new System.Windows.Forms.Padding(2);
             this.BTNELIM.Name = "BTNELIM";
             this.BTNELIM.Size = new System.Drawing.Size(87, 29);
             this.BTNELIM.TabIndex = 60;
@@ -234,8 +234,8 @@
             // 
             // BTNACT
             // 
-            this.BTNACT.Location = new System.Drawing.Point(607, 100);
-            this.BTNACT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNACT.Location = new System.Drawing.Point(607, 84);
+            this.BTNACT.Margin = new System.Windows.Forms.Padding(2);
             this.BTNACT.Name = "BTNACT";
             this.BTNACT.Size = new System.Drawing.Size(87, 29);
             this.BTNACT.TabIndex = 59;
@@ -244,18 +244,19 @@
             // 
             // BTNREG
             // 
-            this.BTNREG.Location = new System.Drawing.Point(607, 62);
-            this.BTNREG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNREG.Location = new System.Drawing.Point(488, 66);
+            this.BTNREG.Margin = new System.Windows.Forms.Padding(2);
             this.BTNREG.Name = "BTNREG";
             this.BTNREG.Size = new System.Drawing.Size(87, 29);
             this.BTNREG.TabIndex = 58;
             this.BTNREG.Text = "Registrar ";
             this.BTNREG.UseVisualStyleBackColor = true;
+            this.BTNREG.Click += new System.EventHandler(this.BTNREG_Click_1);
             // 
             // BTNBUSCAR
             // 
             this.BTNBUSCAR.Location = new System.Drawing.Point(607, 25);
-            this.BTNBUSCAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNBUSCAR.Margin = new System.Windows.Forms.Padding(2);
             this.BTNBUSCAR.Name = "BTNBUSCAR";
             this.BTNBUSCAR.Size = new System.Drawing.Size(87, 29);
             this.BTNBUSCAR.TabIndex = 57;
@@ -280,20 +281,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(805, 223);
             this.dataGridView1.TabIndex = 61;
-            // 
-            // vENTASDataSet5
-            // 
-            this.vENTASDataSet5.DataSetName = "VENTASDataSet5";
-            this.vENTASDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pRODUCTOSBindingSource
-            // 
-            this.pRODUCTOSBindingSource.DataMember = "PRODUCTOS";
-            this.pRODUCTOSBindingSource.DataSource = this.vENTASDataSet5;
-            // 
-            // pRODUCTOSTableAdapter
-            // 
-            this.pRODUCTOSTableAdapter.ClearBeforeFill = true;
             // 
             // pRIDDataGridViewTextBoxColumn
             // 
@@ -343,11 +330,25 @@
             this.pRIVADataGridViewTextBoxColumn.HeaderText = "PR_IVA";
             this.pRIVADataGridViewTextBoxColumn.Name = "pRIVADataGridViewTextBoxColumn";
             // 
+            // pRODUCTOSBindingSource
+            // 
+            this.pRODUCTOSBindingSource.DataMember = "PRODUCTOS";
+            this.pRODUCTOSBindingSource.DataSource = this.vENTASDataSet5;
+            // 
+            // vENTASDataSet5
+            // 
+            this.vENTASDataSet5.DataSetName = "VENTASDataSet5";
+            this.vENTASDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pRODUCTOSTableAdapter
+            // 
+            this.pRODUCTOSTableAdapter.ClearBeforeFill = true;
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(760, 444);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BTNELIM);
@@ -371,13 +372,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Productos";
             this.Text = "Productos.Fm6";
             this.Load += new System.EventHandler(this.Productos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

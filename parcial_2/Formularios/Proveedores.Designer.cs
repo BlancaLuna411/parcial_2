@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.TXTCOM_REG = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TXTPROV_CONT = new System.Windows.Forms.TextBox();
@@ -55,13 +54,9 @@
             this.PROV_ID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BTNELIM = new System.Windows.Forms.Button();
-            this.BTNACT = new System.Windows.Forms.Button();
             this.BTNREG = new System.Windows.Forms.Button();
             this.BTNBUSCAR = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.vENTASDataSet6 = new parcial_2.VENTASDataSet6();
-            this.pROVEEDORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pROVEEDORESTableAdapter = new parcial_2.VENTASDataSet6TableAdapters.PROVEEDORESTableAdapter();
             this.pROIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRONOMBREDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRORFCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,24 +69,20 @@
             this.pROCONTACTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pROTELEFCONTACTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pROREGIMENDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROVEEDORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vENTASDataSet6 = new parcial_2.VENTASDataSet6();
+            this.pROVEEDORESTableAdapter = new parcial_2.VENTASDataSet6TableAdapters.PROVEEDORESTableAdapter();
+            this.TXTCOM_REG = new System.Windows.Forms.TextBox();
+            this.BTNACT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROVEEDORESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet6)).BeginInit();
             this.SuspendLayout();
-            // 
-            // TXTCOM_REG
-            // 
-            this.TXTCOM_REG.FormattingEnabled = true;
-            this.TXTCOM_REG.Location = new System.Drawing.Point(519, 113);
-            this.TXTCOM_REG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TXTCOM_REG.Name = "TXTCOM_REG";
-            this.TXTCOM_REG.Size = new System.Drawing.Size(82, 21);
-            this.TXTCOM_REG.TabIndex = 54;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(447, 116);
+            this.label6.Location = new System.Drawing.Point(464, 156);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
@@ -101,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 192);
+            this.label2.Location = new System.Drawing.Point(226, 46);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
@@ -110,24 +101,24 @@
             // 
             // TXTPROV_CONT
             // 
-            this.TXTPROV_CONT.Location = new System.Drawing.Point(519, 46);
-            this.TXTPROV_CONT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTPROV_CONT.Location = new System.Drawing.Point(533, 68);
+            this.TXTPROV_CONT.Margin = new System.Windows.Forms.Padding(2);
             this.TXTPROV_CONT.Name = "TXTPROV_CONT";
-            this.TXTPROV_CONT.Size = new System.Drawing.Size(68, 20);
+            this.TXTPROV_CONT.Size = new System.Drawing.Size(82, 20);
             this.TXTPROV_CONT.TabIndex = 50;
             // 
             // TXTPROV_TELCONT
             // 
-            this.TXTPROV_TELCONT.Location = new System.Drawing.Point(519, 76);
-            this.TXTPROV_TELCONT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTPROV_TELCONT.Location = new System.Drawing.Point(533, 107);
+            this.TXTPROV_TELCONT.Margin = new System.Windows.Forms.Padding(2);
             this.TXTPROV_TELCONT.Name = "TXTPROV_TELCONT";
-            this.TXTPROV_TELCONT.Size = new System.Drawing.Size(68, 20);
+            this.TXTPROV_TELCONT.Size = new System.Drawing.Size(82, 20);
             this.TXTPROV_TELCONT.TabIndex = 49;
             // 
             // TXTPROV_TEL
             // 
-            this.TXTPROV_TEL.Location = new System.Drawing.Point(306, 42);
-            this.TXTPROV_TEL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTPROV_TEL.Location = new System.Drawing.Point(412, 39);
+            this.TXTPROV_TEL.Margin = new System.Windows.Forms.Padding(2);
             this.TXTPROV_TEL.Name = "TXTPROV_TEL";
             this.TXTPROV_TEL.Size = new System.Drawing.Size(68, 20);
             this.TXTPROV_TEL.TabIndex = 48;
@@ -135,63 +126,63 @@
             // TXTPROV_NOM
             // 
             this.TXTPROV_NOM.Location = new System.Drawing.Point(105, 80);
-            this.TXTPROV_NOM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTPROV_NOM.Margin = new System.Windows.Forms.Padding(2);
             this.TXTPROV_NOM.Name = "TXTPROV_NOM";
-            this.TXTPROV_NOM.Size = new System.Drawing.Size(68, 20);
+            this.TXTPROV_NOM.Size = new System.Drawing.Size(119, 20);
             this.TXTPROV_NOM.TabIndex = 47;
             // 
             // TXTPROV_RFC
             // 
             this.TXTPROV_RFC.Location = new System.Drawing.Point(105, 114);
-            this.TXTPROV_RFC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTPROV_RFC.Margin = new System.Windows.Forms.Padding(2);
             this.TXTPROV_RFC.Name = "TXTPROV_RFC";
-            this.TXTPROV_RFC.Size = new System.Drawing.Size(68, 20);
+            this.TXTPROV_RFC.Size = new System.Drawing.Size(117, 20);
             this.TXTPROV_RFC.TabIndex = 46;
             // 
             // TXTPROV_COR
             // 
             this.TXTPROV_COR.Location = new System.Drawing.Point(105, 153);
-            this.TXTPROV_COR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTPROV_COR.Margin = new System.Windows.Forms.Padding(2);
             this.TXTPROV_COR.Name = "TXTPROV_COR";
-            this.TXTPROV_COR.Size = new System.Drawing.Size(68, 20);
+            this.TXTPROV_COR.Size = new System.Drawing.Size(117, 20);
             this.TXTPROV_COR.TabIndex = 45;
             // 
             // TXTPROV_LADA
             // 
-            this.TXTPROV_LADA.Location = new System.Drawing.Point(105, 190);
-            this.TXTPROV_LADA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTPROV_LADA.Location = new System.Drawing.Point(262, 39);
+            this.TXTPROV_LADA.Margin = new System.Windows.Forms.Padding(2);
             this.TXTPROV_LADA.Name = "TXTPROV_LADA";
             this.TXTPROV_LADA.Size = new System.Drawing.Size(68, 20);
             this.TXTPROV_LADA.TabIndex = 44;
             // 
             // TXTPROV_CALLE
             // 
-            this.TXTPROV_CALLE.Location = new System.Drawing.Point(306, 76);
-            this.TXTPROV_CALLE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTPROV_CALLE.Location = new System.Drawing.Point(262, 76);
+            this.TXTPROV_CALLE.Margin = new System.Windows.Forms.Padding(2);
             this.TXTPROV_CALLE.Name = "TXTPROV_CALLE";
-            this.TXTPROV_CALLE.Size = new System.Drawing.Size(68, 20);
+            this.TXTPROV_CALLE.Size = new System.Drawing.Size(137, 20);
             this.TXTPROV_CALLE.TabIndex = 43;
             // 
             // TXTPROV_NUMEX
             // 
             this.TXTPROV_NUMEX.Location = new System.Drawing.Point(306, 114);
-            this.TXTPROV_NUMEX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTPROV_NUMEX.Margin = new System.Windows.Forms.Padding(2);
             this.TXTPROV_NUMEX.Name = "TXTPROV_NUMEX";
             this.TXTPROV_NUMEX.Size = new System.Drawing.Size(68, 20);
             this.TXTPROV_NUMEX.TabIndex = 42;
             // 
             // TXTPROV_CB
             // 
-            this.TXTPROV_CB.Location = new System.Drawing.Point(306, 151);
-            this.TXTPROV_CB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTPROV_CB.Location = new System.Drawing.Point(331, 152);
+            this.TXTPROV_CB.Margin = new System.Windows.Forms.Padding(2);
             this.TXTPROV_CB.Name = "TXTPROV_CB";
-            this.TXTPROV_CB.Size = new System.Drawing.Size(68, 20);
+            this.TXTPROV_CB.Size = new System.Drawing.Size(91, 20);
             this.TXTPROV_CB.TabIndex = 41;
             // 
             // TXTID_PRO
             // 
             this.TXTID_PRO.Location = new System.Drawing.Point(105, 46);
-            this.TXTID_PRO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTID_PRO.Margin = new System.Windows.Forms.Padding(2);
             this.TXTID_PRO.Name = "TXTID_PRO";
             this.TXTID_PRO.Size = new System.Drawing.Size(68, 20);
             this.TXTID_PRO.TabIndex = 40;
@@ -209,7 +200,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(447, 80);
+            this.label12.Location = new System.Drawing.Point(446, 114);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 13);
@@ -219,7 +210,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(463, 50);
+            this.label11.Location = new System.Drawing.Point(463, 68);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(50, 13);
@@ -229,7 +220,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(215, 155);
+            this.label10.Location = new System.Drawing.Point(226, 155);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(88, 13);
@@ -249,7 +240,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(266, 80);
+            this.label8.Location = new System.Drawing.Point(228, 84);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 13);
@@ -259,7 +250,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(248, 46);
+            this.label7.Location = new System.Drawing.Point(350, 42);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
@@ -309,43 +300,36 @@
             // 
             // BTNELIM
             // 
-            this.BTNELIM.Location = new System.Drawing.Point(619, 155);
-            this.BTNELIM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNELIM.Location = new System.Drawing.Point(651, 148);
+            this.BTNELIM.Margin = new System.Windows.Forms.Padding(2);
             this.BTNELIM.Name = "BTNELIM";
             this.BTNELIM.Size = new System.Drawing.Size(87, 29);
             this.BTNELIM.TabIndex = 60;
             this.BTNELIM.Text = "Eliminar";
             this.BTNELIM.UseVisualStyleBackColor = true;
-            // 
-            // BTNACT
-            // 
-            this.BTNACT.Location = new System.Drawing.Point(619, 116);
-            this.BTNACT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BTNACT.Name = "BTNACT";
-            this.BTNACT.Size = new System.Drawing.Size(87, 29);
-            this.BTNACT.TabIndex = 59;
-            this.BTNACT.Text = "Actualizar";
-            this.BTNACT.UseVisualStyleBackColor = true;
+            this.BTNELIM.Click += new System.EventHandler(this.BTNELIM_Click);
             // 
             // BTNREG
             // 
-            this.BTNREG.Location = new System.Drawing.Point(619, 76);
-            this.BTNREG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNREG.Location = new System.Drawing.Point(651, 68);
+            this.BTNREG.Margin = new System.Windows.Forms.Padding(2);
             this.BTNREG.Name = "BTNREG";
             this.BTNREG.Size = new System.Drawing.Size(87, 29);
             this.BTNREG.TabIndex = 58;
             this.BTNREG.Text = "Registrar ";
             this.BTNREG.UseVisualStyleBackColor = true;
+            this.BTNREG.Click += new System.EventHandler(this.BTNREG_Click);
             // 
             // BTNBUSCAR
             // 
-            this.BTNBUSCAR.Location = new System.Drawing.Point(619, 30);
-            this.BTNBUSCAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNBUSCAR.Location = new System.Drawing.Point(651, 30);
+            this.BTNBUSCAR.Margin = new System.Windows.Forms.Padding(2);
             this.BTNBUSCAR.Name = "BTNBUSCAR";
             this.BTNBUSCAR.Size = new System.Drawing.Size(87, 29);
             this.BTNBUSCAR.TabIndex = 57;
             this.BTNBUSCAR.Text = "Buscar";
             this.BTNBUSCAR.UseVisualStyleBackColor = true;
+            this.BTNBUSCAR.Click += new System.EventHandler(this.BTNBUSCAR_Click);
             // 
             // dataGridView1
             // 
@@ -365,24 +349,10 @@
             this.pROTELEFCONTACTODataGridViewTextBoxColumn,
             this.pROREGIMENDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.pROVEEDORESBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 208);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 189);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(741, 213);
             this.dataGridView1.TabIndex = 61;
-            // 
-            // vENTASDataSet6
-            // 
-            this.vENTASDataSet6.DataSetName = "VENTASDataSet6";
-            this.vENTASDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pROVEEDORESBindingSource
-            // 
-            this.pROVEEDORESBindingSource.DataMember = "PROVEEDORES";
-            this.pROVEEDORESBindingSource.DataSource = this.vENTASDataSet6;
-            // 
-            // pROVEEDORESTableAdapter
-            // 
-            this.pROVEEDORESTableAdapter.ClearBeforeFill = true;
             // 
             // pROIDDataGridViewTextBoxColumn
             // 
@@ -456,18 +426,49 @@
             this.pROREGIMENDataGridViewTextBoxColumn.HeaderText = "PRO_REGIMEN";
             this.pROREGIMENDataGridViewTextBoxColumn.Name = "pROREGIMENDataGridViewTextBoxColumn";
             // 
+            // pROVEEDORESBindingSource
+            // 
+            this.pROVEEDORESBindingSource.DataMember = "PROVEEDORES";
+            this.pROVEEDORESBindingSource.DataSource = this.vENTASDataSet6;
+            // 
+            // vENTASDataSet6
+            // 
+            this.vENTASDataSet6.DataSetName = "VENTASDataSet6";
+            this.vENTASDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pROVEEDORESTableAdapter
+            // 
+            this.pROVEEDORESTableAdapter.ClearBeforeFill = true;
+            // 
+            // TXTCOM_REG
+            // 
+            this.TXTCOM_REG.Location = new System.Drawing.Point(533, 148);
+            this.TXTCOM_REG.Name = "TXTCOM_REG";
+            this.TXTCOM_REG.Size = new System.Drawing.Size(82, 20);
+            this.TXTCOM_REG.TabIndex = 62;
+            // 
+            // BTNACT
+            // 
+            this.BTNACT.Location = new System.Drawing.Point(651, 110);
+            this.BTNACT.Margin = new System.Windows.Forms.Padding(2);
+            this.BTNACT.Name = "BTNACT";
+            this.BTNACT.Size = new System.Drawing.Size(87, 29);
+            this.BTNACT.TabIndex = 59;
+            this.BTNACT.Text = "Actualizar";
+            this.BTNACT.UseVisualStyleBackColor = true;
+            // 
             // Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(749, 440);
+            this.Controls.Add(this.TXTCOM_REG);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BTNELIM);
             this.Controls.Add(this.BTNACT);
             this.Controls.Add(this.BTNREG);
             this.Controls.Add(this.BTNBUSCAR);
-            this.Controls.Add(this.TXTCOM_REG);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TXTPROV_CONT);
@@ -492,21 +493,19 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.PROV_ID);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Proveedores";
             this.Text = "Proveedores.Fm3";
             this.Load += new System.EventHandler(this.Proveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROVEEDORESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox TXTCOM_REG;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TXTPROV_CONT;
@@ -532,7 +531,6 @@
         private System.Windows.Forms.Label PROV_ID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BTNELIM;
-        private System.Windows.Forms.Button BTNACT;
         private System.Windows.Forms.Button BTNREG;
         private System.Windows.Forms.Button BTNBUSCAR;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -551,5 +549,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pROCONTACTODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pROTELEFCONTACTODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pROREGIMENDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox TXTCOM_REG;
+        private System.Windows.Forms.Button BTNACT;
     }
 }

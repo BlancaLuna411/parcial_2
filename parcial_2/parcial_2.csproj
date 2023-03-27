@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,7 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cl_Al.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="dsAlmacenes.cs">
+      <DependentUpon>dsAlmacenes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsAlmacenes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAlmacenes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +75,12 @@
     </Compile>
     <Compile Include="Formularios\Compras.Designer.cs">
       <DependentUpon>Compras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Existencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Existencias.Designer.cs">
+      <DependentUpon>Existencias.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Productos.cs">
       <SubType>Form</SubType>
@@ -91,15 +108,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VENTASDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>VENTASDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="VENTASDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VENTASDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet11.xsd</DependentUpon>
     </Compile>
     <Compile Include="VENTASDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -136,6 +158,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VENTASDataSet8.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VENTASDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet9.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Formularios\Almacen.resx">
       <DependentUpon>Almacen.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Compras.resx">
       <DependentUpon>Compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Existencias.resx">
+      <DependentUpon>Existencias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Productos.resx">
       <DependentUpon>Productos.cs</DependentUpon>
@@ -166,6 +196,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="dsAlmacenes.xsc">
+      <DependentUpon>dsAlmacenes.xsd</DependentUpon>
+    </None>
+    <None Include="dsAlmacenes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAlmacenes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsAlmacenes.xss">
+      <DependentUpon>dsAlmacenes.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -175,17 +216,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="VENTASDataSet.xsc">
-      <DependentUpon>VENTASDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="VENTASDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>VENTASDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="VENTASDataSet.xss">
-      <DependentUpon>VENTASDataSet.xsd</DependentUpon>
-    </None>
     <None Include="VENTASDataSet1.xsc">
       <DependentUpon>VENTASDataSet1.xsd</DependentUpon>
     </None>
@@ -196,6 +226,28 @@
     </None>
     <None Include="VENTASDataSet1.xss">
       <DependentUpon>VENTASDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet10.xsc">
+      <DependentUpon>VENTASDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet10.xss">
+      <DependentUpon>VENTASDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet11.xsc">
+      <DependentUpon>VENTASDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet11.xss">
+      <DependentUpon>VENTASDataSet11.xsd</DependentUpon>
     </None>
     <None Include="VENTASDataSet2.xsc">
       <DependentUpon>VENTASDataSet2.xsd</DependentUpon>
@@ -273,6 +325,17 @@
     </None>
     <None Include="VENTASDataSet8.xss">
       <DependentUpon>VENTASDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet9.xsc">
+      <DependentUpon>VENTASDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet9.xss">
+      <DependentUpon>VENTASDataSet9.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

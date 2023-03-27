@@ -26,11 +26,21 @@ namespace parcial_2.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BLANCALUNA\\SQLEXPRESS;Initial Catalog=VENTAS;Integrated Security=True" +
-            "")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DataSource=BLANCALUNA\\SQLEXPRESS;Initial Catalog=VENTAS;Integrated Security=True")]
         public string VENTASConnectionString {
             get {
                 return ((string)(this["VENTASConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BLANCALUNA\\SQLEXPRESS;Initial Catalog=VENTAS;Integrated Security=True" +
+            "")]
+        public string VENTASConnectionString1 {
+            get {
+                return ((string)(this["VENTASConnectionString1"]));
             }
         }
     }

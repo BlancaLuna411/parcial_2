@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label13 = new System.Windows.Forms.Label();
-            this.COMBOX_REG = new System.Windows.Forms.ComboBox();
             this.BTNBUSCAR = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.TXTCL_TELCON = new System.Windows.Forms.TextBox();
@@ -59,9 +58,6 @@
             this.BTNACT = new System.Windows.Forms.Button();
             this.BTNELIM = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.vENTASDataSet1 = new parcial_2.VENTASDataSet1();
-            this.cLIENTESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cLIENTESTableAdapter = new parcial_2.VENTASDataSet1TableAdapters.CLIENTESTableAdapter();
             this.cLIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cLNOMBREDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cLRFCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,9 +70,13 @@
             this.cLCONTACTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cLTELEFCONTACTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cLREGIMENDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cLIENTESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vENTASDataSet1 = new parcial_2.VENTASDataSet1();
+            this.cLIENTESTableAdapter = new parcial_2.VENTASDataSet1TableAdapters.CLIENTESTableAdapter();
+            this.COMBOX_REG = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label13
@@ -89,24 +89,16 @@
             this.label13.TabIndex = 53;
             this.label13.Text = "Regimen";
             // 
-            // COMBOX_REG
-            // 
-            this.COMBOX_REG.FormattingEnabled = true;
-            this.COMBOX_REG.Location = new System.Drawing.Point(331, 214);
-            this.COMBOX_REG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.COMBOX_REG.Name = "COMBOX_REG";
-            this.COMBOX_REG.Size = new System.Drawing.Size(82, 21);
-            this.COMBOX_REG.TabIndex = 52;
-            // 
             // BTNBUSCAR
             // 
             this.BTNBUSCAR.Location = new System.Drawing.Point(522, 40);
-            this.BTNBUSCAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNBUSCAR.Margin = new System.Windows.Forms.Padding(2);
             this.BTNBUSCAR.Name = "BTNBUSCAR";
             this.BTNBUSCAR.Size = new System.Drawing.Size(87, 29);
             this.BTNBUSCAR.TabIndex = 51;
             this.BTNBUSCAR.Text = "Buscar";
             this.BTNBUSCAR.UseVisualStyleBackColor = true;
+            this.BTNBUSCAR.Click += new System.EventHandler(this.BTNBUSCAR_Click);
             // 
             // label12
             // 
@@ -122,7 +114,7 @@
             // TXTCL_TELCON
             // 
             this.TXTCL_TELCON.Location = new System.Drawing.Point(331, 182);
-            this.TXTCL_TELCON.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTCL_TELCON.Margin = new System.Windows.Forms.Padding(2);
             this.TXTCL_TELCON.Name = "TXTCL_TELCON";
             this.TXTCL_TELCON.Size = new System.Drawing.Size(68, 20);
             this.TXTCL_TELCON.TabIndex = 49;
@@ -130,7 +122,7 @@
             // TXTCL_CONTACTO
             // 
             this.TXTCL_CONTACTO.Location = new System.Drawing.Point(331, 150);
-            this.TXTCL_CONTACTO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTCL_CONTACTO.Margin = new System.Windows.Forms.Padding(2);
             this.TXTCL_CONTACTO.Name = "TXTCL_CONTACTO";
             this.TXTCL_CONTACTO.Size = new System.Drawing.Size(68, 20);
             this.TXTCL_CONTACTO.TabIndex = 48;
@@ -188,7 +180,7 @@
             // TXTCL_NUMEXT
             // 
             this.TXTCL_NUMEXT.Location = new System.Drawing.Point(331, 84);
-            this.TXTCL_NUMEXT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTCL_NUMEXT.Margin = new System.Windows.Forms.Padding(2);
             this.TXTCL_NUMEXT.Name = "TXTCL_NUMEXT";
             this.TXTCL_NUMEXT.Size = new System.Drawing.Size(68, 20);
             this.TXTCL_NUMEXT.TabIndex = 42;
@@ -196,7 +188,7 @@
             // TXTCL_RFC
             // 
             this.TXTCL_RFC.Location = new System.Drawing.Point(92, 117);
-            this.TXTCL_RFC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTCL_RFC.Margin = new System.Windows.Forms.Padding(2);
             this.TXTCL_RFC.Name = "TXTCL_RFC";
             this.TXTCL_RFC.Size = new System.Drawing.Size(68, 20);
             this.TXTCL_RFC.TabIndex = 41;
@@ -204,7 +196,7 @@
             // TXTCL_CORREO
             // 
             this.TXTCL_CORREO.Location = new System.Drawing.Point(92, 146);
-            this.TXTCL_CORREO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTCL_CORREO.Margin = new System.Windows.Forms.Padding(2);
             this.TXTCL_CORREO.Name = "TXTCL_CORREO";
             this.TXTCL_CORREO.Size = new System.Drawing.Size(68, 20);
             this.TXTCL_CORREO.TabIndex = 40;
@@ -212,7 +204,7 @@
             // TXTCL_CALLE
             // 
             this.TXTCL_CALLE.Location = new System.Drawing.Point(331, 45);
-            this.TXTCL_CALLE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTCL_CALLE.Margin = new System.Windows.Forms.Padding(2);
             this.TXTCL_CALLE.Name = "TXTCL_CALLE";
             this.TXTCL_CALLE.Size = new System.Drawing.Size(68, 20);
             this.TXTCL_CALLE.TabIndex = 39;
@@ -220,7 +212,7 @@
             // TXTCL_CUENTABAN
             // 
             this.TXTCL_CUENTABAN.Location = new System.Drawing.Point(331, 117);
-            this.TXTCL_CUENTABAN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTCL_CUENTABAN.Margin = new System.Windows.Forms.Padding(2);
             this.TXTCL_CUENTABAN.Name = "TXTCL_CUENTABAN";
             this.TXTCL_CUENTABAN.Size = new System.Drawing.Size(68, 20);
             this.TXTCL_CUENTABAN.TabIndex = 38;
@@ -228,7 +220,7 @@
             // TXTCL_LADA
             // 
             this.TXTCL_LADA.Location = new System.Drawing.Point(92, 178);
-            this.TXTCL_LADA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTCL_LADA.Margin = new System.Windows.Forms.Padding(2);
             this.TXTCL_LADA.Name = "TXTCL_LADA";
             this.TXTCL_LADA.Size = new System.Drawing.Size(68, 20);
             this.TXTCL_LADA.TabIndex = 37;
@@ -236,7 +228,7 @@
             // TXTCL_TELEFONO
             // 
             this.TXTCL_TELEFONO.Location = new System.Drawing.Point(92, 214);
-            this.TXTCL_TELEFONO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTCL_TELEFONO.Margin = new System.Windows.Forms.Padding(2);
             this.TXTCL_TELEFONO.Name = "TXTCL_TELEFONO";
             this.TXTCL_TELEFONO.Size = new System.Drawing.Size(68, 20);
             this.TXTCL_TELEFONO.TabIndex = 36;
@@ -244,7 +236,7 @@
             // TXTCL_ID
             // 
             this.TXTCL_ID.Location = new System.Drawing.Point(92, 52);
-            this.TXTCL_ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTCL_ID.Margin = new System.Windows.Forms.Padding(2);
             this.TXTCL_ID.Name = "TXTCL_ID";
             this.TXTCL_ID.Size = new System.Drawing.Size(68, 20);
             this.TXTCL_ID.TabIndex = 35;
@@ -252,7 +244,7 @@
             // TXTCL_NOMBRE
             // 
             this.TXTCL_NOMBRE.Location = new System.Drawing.Point(92, 84);
-            this.TXTCL_NOMBRE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXTCL_NOMBRE.Margin = new System.Windows.Forms.Padding(2);
             this.TXTCL_NOMBRE.Name = "TXTCL_NOMBRE";
             this.TXTCL_NOMBRE.Size = new System.Drawing.Size(68, 20);
             this.TXTCL_NOMBRE.TabIndex = 34;
@@ -320,17 +312,18 @@
             // BTNREG
             // 
             this.BTNREG.Location = new System.Drawing.Point(522, 95);
-            this.BTNREG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNREG.Margin = new System.Windows.Forms.Padding(2);
             this.BTNREG.Name = "BTNREG";
             this.BTNREG.Size = new System.Drawing.Size(87, 29);
             this.BTNREG.TabIndex = 54;
             this.BTNREG.Text = "Registrar ";
             this.BTNREG.UseVisualStyleBackColor = true;
+            this.BTNREG.Click += new System.EventHandler(this.BTNREG_Click);
             // 
             // BTNACT
             // 
             this.BTNACT.Location = new System.Drawing.Point(522, 150);
-            this.BTNACT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNACT.Margin = new System.Windows.Forms.Padding(2);
             this.BTNACT.Name = "BTNACT";
             this.BTNACT.Size = new System.Drawing.Size(87, 29);
             this.BTNACT.TabIndex = 55;
@@ -340,12 +333,13 @@
             // BTNELIM
             // 
             this.BTNELIM.Location = new System.Drawing.Point(522, 205);
-            this.BTNELIM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNELIM.Margin = new System.Windows.Forms.Padding(2);
             this.BTNELIM.Name = "BTNELIM";
             this.BTNELIM.Size = new System.Drawing.Size(87, 29);
             this.BTNELIM.TabIndex = 56;
             this.BTNELIM.Text = "Eliminar";
             this.BTNELIM.UseVisualStyleBackColor = true;
+            this.BTNELIM.Click += new System.EventHandler(this.BTNELIM_Click);
             // 
             // dataGridView1
             // 
@@ -369,20 +363,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(672, 126);
             this.dataGridView1.TabIndex = 57;
-            // 
-            // vENTASDataSet1
-            // 
-            this.vENTASDataSet1.DataSetName = "VENTASDataSet1";
-            this.vENTASDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cLIENTESBindingSource
-            // 
-            this.cLIENTESBindingSource.DataMember = "CLIENTES";
-            this.cLIENTESBindingSource.DataSource = this.vENTASDataSet1;
-            // 
-            // cLIENTESTableAdapter
-            // 
-            this.cLIENTESTableAdapter.ClearBeforeFill = true;
             // 
             // cLIDDataGridViewTextBoxColumn
             // 
@@ -456,18 +436,39 @@
             this.cLREGIMENDataGridViewTextBoxColumn.HeaderText = "CL_REGIMEN";
             this.cLREGIMENDataGridViewTextBoxColumn.Name = "cLREGIMENDataGridViewTextBoxColumn";
             // 
+            // cLIENTESBindingSource
+            // 
+            this.cLIENTESBindingSource.DataMember = "CLIENTES";
+            this.cLIENTESBindingSource.DataSource = this.vENTASDataSet1;
+            // 
+            // vENTASDataSet1
+            // 
+            this.vENTASDataSet1.DataSetName = "VENTASDataSet1";
+            this.vENTASDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cLIENTESTableAdapter
+            // 
+            this.cLIENTESTableAdapter.ClearBeforeFill = true;
+            // 
+            // COMBOX_REG
+            // 
+            this.COMBOX_REG.Location = new System.Drawing.Point(331, 208);
+            this.COMBOX_REG.Name = "COMBOX_REG";
+            this.COMBOX_REG.Size = new System.Drawing.Size(68, 20);
+            this.COMBOX_REG.TabIndex = 58;
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(684, 378);
+            this.Controls.Add(this.COMBOX_REG);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BTNELIM);
             this.Controls.Add(this.BTNACT);
             this.Controls.Add(this.BTNREG);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.COMBOX_REG);
             this.Controls.Add(this.BTNBUSCAR);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.TXTCL_TELCON);
@@ -492,13 +493,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Clientes";
             this.Text = "Clientes.Fm2";
             this.Load += new System.EventHandler(this.Clientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,7 +507,6 @@
 
         #endregion
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox COMBOX_REG;
         private System.Windows.Forms.Button BTNBUSCAR;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox TXTCL_TELCON;
@@ -550,5 +550,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cLCONTACTODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cLTELEFCONTACTODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cLREGIMENDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox COMBOX_REG;
     }
 }

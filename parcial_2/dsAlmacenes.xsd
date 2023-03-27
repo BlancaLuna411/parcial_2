@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="VENTASDataSet" targetNamespace="http://tempuri.org/VENTASDataSet.xsd" xmlns:mstns="http://tempuri.org/VENTASDataSet.xsd" xmlns="http://tempuri.org/VENTASDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="dsAlmacenes" targetNamespace="http://tempuri.org/dsAlmacenes.xsd" xmlns:mstns="http://tempuri.org/dsAlmacenes.xsd" xmlns="http://tempuri.org/dsAlmacenes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="VENTASConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="VENTASConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.parcial_2.Properties.Settings.GlobalReference.Default.VENTASConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="VENTASConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="VENTASConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.parcial_2.Properties.Settings.GlobalReference.Default.VENTASConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ALMACENESTableAdapter" GeneratorDataComponentClassName="ALMACENESTableAdapter" Name="ALMACENES" UserDataComponentName="ALMACENESTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="VENTASConnectionString (Settings)" DbObjectName="VENTAS.dbo.ALMACENES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="VENTASConnectionString1 (Settings)" DbObjectName="VENTAS.dbo.ALMACENES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[ALMACENES] WHERE (([AL_ID] = @Original_AL_ID) AND ((@IsNull_AL_NOMBRE = 1 AND [AL_NOMBRE] IS NULL) OR ([AL_NOMBRE] = @Original_AL_NOMBRE)))</CommandText>
@@ -62,7 +62,7 @@ SELECT AL_ID, AL_NOMBRE FROM ALMACENES WHERE (AL_ID = @AL_ID)</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="VENTASDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="VENTASDataSet" msprop:Generator_DataSetName="VENTASDataSet">
+  <xs:element name="dsAlmacenes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="dsAlmacenes" msprop:Generator_DataSetName="dsAlmacenes">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="ALMACENES" msprop:Generator_RowEvHandlerName="ALMACENESRowChangeEventHandler" msprop:Generator_RowDeletedName="ALMACENESRowDeleted" msprop:Generator_RowDeletingName="ALMACENESRowDeleting" msprop:Generator_RowEvArgName="ALMACENESRowChangeEvent" msprop:Generator_TablePropName="ALMACENES" msprop:Generator_RowChangedName="ALMACENESRowChanged" msprop:Generator_RowChangingName="ALMACENESRowChanging" msprop:Generator_TableClassName="ALMACENESDataTable" msprop:Generator_RowClassName="ALMACENESRow" msprop:Generator_TableVarName="tableALMACENES" msprop:Generator_UserTableName="ALMACENES">

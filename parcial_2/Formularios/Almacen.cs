@@ -13,15 +13,19 @@ namespace parcial_2
 {
     public partial class Almacen : Form
     {
+        SqlConnection con = new SqlConnection(Conexion.conectar());
         public Almacen()
         {
             InitializeComponent();
+            this.aLMACENESTableAdapter.Connection = con;
         }
 
         private void Almacen_Load(object sender, EventArgs e)
-        { 
-            //TODO: esta línea de código carga datos en la tabla 'vENTASDataSet.ALMACENES' Puede moverla o quitarla según sea necesario.
-            this.aLMACENESTableAdapter.Fill(this.vENTASDataSet.ALMACENES);
+        {
+            // TODO: esta línea de código carga datos en la tabla 'dsAlmacenes.ALMACENES' Puede moverla o quitarla según sea necesario.
+           // this.aLMACENESTableAdapter.Fill(this.dsAlmacenes.ALMACENES);
+            //TODO: esta línea de código carga datos en la tabla 'dsAlmacenes.ALMACENES' Puede moverla o quitarla según sea necesario.
+            this.aLMACENESTableAdapter.Fill(this.dsAlmacenes.ALMACENES);
             consecutivo();
             //MostrarDatos();
             
@@ -39,11 +43,11 @@ namespace parcial_2
             cmd.Parameters.AddWithValue("@AL_ID", TXTID.Text);
             cmd.Parameters.AddWithValue("@AL_NOMBRE", TXTNOM.Text);
           
-            MessageBox.Show("Sus datos se guardaron correctamente");
             try
             {
                 con.Open();
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Sus datos se guardaron correctamente");
             }
 
             catch (Exception ex)
@@ -57,6 +61,35 @@ namespace parcial_2
             }
         }
 
+
+       /* private void Actualizar()
+        {
+            SqlConnection con = new SqlConnection(Conexion.conectar());
+            SqlCommand cmd = new SqlCommand("", con);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SP_ALMACENES";
+            cmd.Parameters.AddWithValue("@OP", 2);
+            cmd.Parameters.AddWithValue("@AL_ID", TXTID.Text);
+            cmd.Parameters.AddWithValue("@AL_NOMBRE", TXTNOM.Text);
+
+            MessageBox.Show("Sus datos se Actializaron correctamente");
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudieron Actualizar los dato. Error:" + ex);
+            }
+
+            finally
+            {
+                con.Close();
+            }
+        }*/
         private void eliminar()
         {
             SqlConnection con = new SqlConnection(Conexion.conectar());
@@ -96,9 +129,9 @@ namespace parcial_2
                 string sql = "EXECUTE SP_ALMACENES";
                 SqlDataAdapter adapter;
                 adapter = new SqlDataAdapter(sql, mSqlConnection);
-                vENTASDataSet.Tables["SP_ALMACENES"].Clear();
-                adapter.Fill(vENTASDataSet, "SP_ALMACENES");
-                dataGridView1.DataSource = vENTASDataSet.Tables["SP_ALMACENES"];
+                dsAlmacenes.Tables["SP_ALMACENES"].Clear();
+                adapter.Fill(dsAlmacenes, "SP_ALMACENES");
+                dataGridView1.DataSource = dsAlmacenes.Tables["SP_ALMACENES"];
             }
             catch (Exception ex)
             {
@@ -119,6 +152,7 @@ namespace parcial_2
 
 
         }
+        
 
         private void consecutivo()
         {
@@ -165,6 +199,17 @@ namespace parcial_2
         private void BTNELIM_Click(object sender, EventArgs e)
         {
             eliminar();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void BTNACT_Click(object sender, EventArgs e)
+        {
+           // Actualizar();
         }
     }
 }
